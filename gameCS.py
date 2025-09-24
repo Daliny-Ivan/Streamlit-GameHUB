@@ -13,7 +13,7 @@ BG_DARK = os.path.join(script_dir, "assets", "GAMEHUB_BG_DARK.png")
 #----------------------------------------------------------------Theme (DARK/LIGHT)
 def set_theme(theme):
     bg_img = BG_LIGHT if theme == "Light" else BG_DARK
-    text_color = "lavender" if theme == "Light" else "skyblue"
+    text_color = "#ff61d2" if theme == "Light" else "skyblue"
     try:
         with open(bg_img, "rb") as f:
             data = f.read()
@@ -293,6 +293,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
