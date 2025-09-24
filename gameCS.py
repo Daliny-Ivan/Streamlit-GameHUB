@@ -236,7 +236,7 @@ def show_login_page():
     st.header(" ")
     st.header("Game Hub Login")
     st.text_input("Enter your name:", key="username_input", on_change=handle_login)
-    st.button("Login", on_click=handle_login)
+    st.button("Login", on_click=handle_login,type="primary")                        # H E R E   EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
 
 def show_main_menu():
     st.header(" ")   #To add space between text start and the header in bg
@@ -293,6 +293,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
