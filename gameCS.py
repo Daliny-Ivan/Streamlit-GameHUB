@@ -19,7 +19,7 @@ button[data-baseweb="button"] {
 # --- Constants and Initialization ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 LOGO_PATH = os.path.join(script_dir, "assets", "IVAN_CHIBI.jpg")
-BG_IMAGE_PATH = os.path.join(script_dir, "assets", "GAMEHUB_BG_aesthetic.png")
+BG_IMAGE_PATH = os.path.join(script_dir, "assets", "GAMEHUB_BG_LIGHT.png")
 
 # --- Set Logo ---
 def set_logo(logo_path):
@@ -306,5 +306,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
