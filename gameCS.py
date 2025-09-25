@@ -101,6 +101,8 @@ def play_hangman():
         st.session_state.hangman_attempts = 6
         st.session_state.hangman_hints = word_list
     
+    st.header("")
+    st.header("")
     st.header("Hangman")
     st.write(st.session_state.hangman_hints[st.session_state.hangman_word])
     st.markdown(f"**{' '.join(st.session_state.hangman_guessed)}**", unsafe_allow_html=True)
@@ -157,6 +159,8 @@ def play_tictactoe():
         st.session_state.tictactoe_board = [" "] * 9
         st.session_state.tictactoe_turn = "X"
 
+    st.header("")
+    st.header("")
     st.header("Tic Tac Toe")
     st.write(f"Current Turn: {st.session_state.tictactoe_turn}")
 
@@ -169,7 +173,6 @@ def play_tictactoe():
         st.session_state.page = 'main_menu'
         st.session_state.pop('tictactoe_board', None)
         st.session_state.pop('tictactoe_turn', None)
-        st.rerun()
 
 def play_memory():
     if 'memory_cards' not in st.session_state:
@@ -180,6 +183,8 @@ def play_memory():
         st.session_state.memory_matched = []
         st.session_state.memory_block_clicks = False
 
+    st.header("")
+    st.header("")
     st.header("Memory Match")
 
     cols = st.columns(4)
@@ -266,6 +271,8 @@ def show_main_menu():
         st.rerun()
         
 def show_user_scores():
+    st.header("")
+    st.header("")
     st.header("📊 Your Scores")
     
     if not st.session_state.user_scores:
@@ -294,6 +301,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
