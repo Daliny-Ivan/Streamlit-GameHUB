@@ -110,7 +110,6 @@ def play_hangman():
     draw_hangman(st.session_state.hangman_attempts)
 
     st.text_input("Enter a letter:", max_chars=1, key="hangman_input_value", on_change=handle_guess)
-
     # Check for win/loss conditions
     if "_" not in st.session_state.hangman_guessed:
         st.success("You won!!")
@@ -123,7 +122,6 @@ def play_hangman():
         st.session_state.page = 'main_menu'
         st.session_state.pop('hangman_word', None)
         st.rerun()
-
     if st.button("Exit to Main Menu"):
         st.session_state.page = 'main_menu'
         st.session_state.pop('hangman_word', None)
@@ -140,6 +138,9 @@ def check_tictactoe_win():
     return None
 
 def handle_tictactoe_click(i):
+    if 'tictactoe_board' not in st.session_state:
+        st.session_state.tictactoe_board = [" "] * 9
+        st.session_state.tictactoe_turn = "X"
     if st.session_state.tictactoe_board[i] == " ":
         st.session_state.tictactoe_board[i] = st.session_state.tictactoe_turn
         st.session_state.tictactoe_turn = "O" if st.session_state.tictactoe_turn == "X" else "X"
@@ -301,6 +302,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
